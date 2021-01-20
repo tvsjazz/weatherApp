@@ -1,0 +1,23 @@
+div {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+div span {
+    margin-right: 8px;
+}
+
+div ul {
+    margin: 0;
+}
+
+div ul li {
+    cursor: pointer;
+}
+
+div ul li .badge {
+    padding: 0.5em;
+    font-size: 1em;
+    color: white;
+}

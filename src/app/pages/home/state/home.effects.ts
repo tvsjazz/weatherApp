@@ -15,7 +15,7 @@ export class HomeEffects {
             ofType(fromHomeActions.loadCurrentWeather),
             mergeMap(({ query }) => this.weatherService.getCityWeatherByQuery(query)),
             catchError((err, caught$) => {
-                this.store.dispatch(fromHomeActions.loadCurrentWeatherFail());
+                this.store.dispatch(fromHomeActions.loadCurrentWeatherFailed());
                 return caught$;
             }),
             map((entity: any) => fromHomeActions.loadCurrentWeatherSuccess({ entity })),
